@@ -1,6 +1,13 @@
 
 function loadHome() {
-    console.log('load home');
+    
+    const main = document.querySelector('main');
+    main.classList.remove('menu');
+    main.innerHTML =
+        `<h1>Sunrise Cafe</h1>
+        <span>est. 1967</span>`;
+
+
 }
 
 export default loadHome;

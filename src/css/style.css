@@ -47,6 +47,31 @@ header li:hover {
 }
 
 
+.menu {
+  background-color: var(--colorlight);
+  color: var(--colordark);
+}
+
+
+.menu-item {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  gap: 5px;
+
+  margin: 10px;
+  padding: 10px;
+  max-width: 800px;
+
+  border: 2px dotted var(--colordark);
+}
+
+
+
+
+
+
 /**********/
 /* LAYOUT */
 /**********/
@@ -58,7 +83,7 @@ footer{
 }
 
 main {
-  height: calc(100vh - 100px);
+  min-height: calc(100vh - 100px);
 }
 
 main,
