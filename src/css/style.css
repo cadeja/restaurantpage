@@ -36,6 +36,13 @@ body {
   color: var(--colorlight);
 }
 
+main{
+  transition-duration: 500ms;
+}
+
+.menu {
+  color: var(--colordark);
+}
 
 header li {
   background-color: var(--colordark);
@@ -47,9 +54,8 @@ header li:hover {
 }
 
 
-.menu {
+.inverse-color {
   background-color: var(--colorlight);
-  color: var(--colordark);
 }
 
 
@@ -82,10 +88,6 @@ footer{
   height: 50px;
 }
 
-main {
-  min-height: calc(100vh - 100px);
-}
-
 main,
 header ul,
 footer {
@@ -93,6 +95,7 @@ footer {
 }
 
 main {
+  min-height: calc(100vh - 100px);
   flex-direction: column;
 }
 

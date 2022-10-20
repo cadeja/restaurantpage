@@ -1,7 +1,7 @@
 let menuElements = [];
 
 // returns menu item element
-// still needs to be appended to the document
+// gets appended in loadMenu
 function addMenuItem(name,description,price) {
 
     const item = document.createElement('div');
@@ -23,6 +23,8 @@ function addMenuItem(name,description,price) {
     menuElements.push(item);
 }
 
+// returns menu section h2
+// gets appended in loadMenu
 function addMenuSection(title){
 
     const item = document.createElement('h2');
@@ -54,20 +56,23 @@ function loadMenu() {
     // clear main
     const main = document.querySelector('main');
     main.innerHTML = '';
+    main.classList.add('inverse-color');
+
+    const section = document.createElement('section');
+    section.classList.add('menu');
+    main.appendChild(section);
+
 
     const title = document.createElement('h1');
     title.classList.add('menu-title');
     title.textContent = "Menu";
-    main.appendChild(title);
+    section.appendChild(title);
 
-    main.classList.add('menu');
 
 
     for (let i = 0; i < menuElements.length; i++){
-        main.appendChild(menuElements[i]);
+        section.appendChild(menuElements[i]);
     }
-
-
 }
 
 
