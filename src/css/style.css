@@ -105,10 +105,14 @@ header li:hover {
   font-size: 1.8em;
 }
 
+h1,
+.active {
+  border-bottom: 3px solid;
+}
+
 h1 {
   font-size: 2.5em;
   padding: 10px;
-  border-bottom: 3px solid;
   margin: 5px 0px 15px;
 }
 

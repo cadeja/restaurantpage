@@ -14,7 +14,7 @@ function InitPage(){
     header.innerHTML = 
         `<nav>
             <ul>
-                <li id='home-btn'>Home</li>
+                <li id='home-btn' class='active'>Home</li>
                 <li id='menu-btn'>Menu</li>
                 <li id='contact-btn'>Contact</li>
             </ul>
@@ -38,7 +38,25 @@ const homeBtn = document.getElementById('home-btn');
 const menuBtn = document.getElementById('menu-btn');
 const contactBtn = document.getElementById('contact-btn');
 
-homeBtn.addEventListener('click', loadHome);
-menuBtn.addEventListener('click', loadMenu);
-contactBtn.addEventListener('click', loadContact);
+homeBtn.addEventListener('click', () => {
+    homeBtn.classList.add('active');
+    menuBtn.classList.remove('active');
+    contactBtn.classList.remove('active');
+
+    loadHome();
+});
+menuBtn.addEventListener('click', () => {
+    homeBtn.classList.remove('active');
+    menuBtn.classList.add('active');
+    contactBtn.classList.remove('active');
+
+    loadMenu();
+});
+contactBtn.addEventListener('click', () => {
+    homeBtn.classList.remove('active');
+    menuBtn.classList.remove('active');
+    contactBtn.classList.add('active');
+
+    loadContact();
+});
 
