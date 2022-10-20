@@ -57,6 +57,7 @@ function loadMenu() {
     const main = document.querySelector('main');
     main.innerHTML = '';
     main.classList.add('inverse-color');
+    main.classList.remove('home');
 
     const section = document.createElement('section');
     section.classList.add('menu');

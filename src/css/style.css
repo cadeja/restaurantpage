@@ -40,10 +40,6 @@ main{
   transition-duration: 500ms;
 }
 
-.menu {
-  color: var(--colordark);
-}
-
 header li {
   background-color: var(--colordark);
 }
@@ -53,11 +49,14 @@ header li:hover {
   cursor: pointer;
 }
 
-
 .inverse-color {
   background-color: var(--colorlight);
 }
 
+.menu,
+.contact {
+  color: var(--colordark);
+}
 
 .menu-item {
   display: grid;
@@ -73,9 +72,54 @@ header li:hover {
   border: 2px dotted var(--colordark);
 }
 
+.contact {
+  height: 100%;
+}
 
+.hours {
+  margin: 10px;
+  font-size: 1.2em;
+  font-style: italic;
+}
 
+.hours div {
+  margin: 5px;
+}
 
+.phone {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+
+  margin: 15px;
+}
+
+.phone-icon {
+  fill: var(--colordark);
+  height: 30px;
+  padding-right: 10px;
+}
+
+.phone-number {
+  font-size: 1.8em;
+}
+
+h1 {
+  font-size: 2.5em;
+  padding: 10px;
+  border-bottom: 3px solid;
+  margin: 5px 0px 15px;
+}
+
+h2{
+  font-size: 1.8em;
+  padding: 30px 0px 10px;
+}
+
+h3 {
+  font-size: 1.2em;
+}
 
 
 /**********/
@@ -90,29 +134,48 @@ footer{
 
 main,
 header ul,
-footer {
+header,
+footer,
+.home,
+.menu,
+.contact {
   display: flex;
+}
+
+.menu,
+main,
+.contact {
+  flex-direction: column;
 }
 
 main {
   min-height: calc(100vh - 100px);
-  flex-direction: column;
 }
 
 footer,
-main {
+.home,
+.menu,
+.contact {
   justify-content: center;
   align-items: center;
 }
 
-header ul{
+header ul,
+header {
   justify-content: flex-end;
+}
+
+header ul {
+  margin-right: 30px;
 }
 
 header li {
   margin: 10px 20px;
 }
 
+header {
+  align-items: center;
+}
 
 /******************************************
 /* ADDITIONAL STYLES
